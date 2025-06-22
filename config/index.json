@@ -1,0 +1,19 @@
+{
+    "routes": [
+        {
+            "prefix": "/api/user",
+            "methods": ["GET", "POST"],
+            "target": "http://localhost:3000/user"
+        },
+        {
+            "prefix": "/api/auth",
+            "methods": ["GET", "POST"],
+            "target": "http://localhost:4000/auth"
+        },
+        {
+            "prefix": "/public",
+            "methods": ["GET"],
+            "target": "http://localhost:5000"
+        }
+    ]
+}

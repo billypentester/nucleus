@@ -1,0 +1,48 @@
+# .air.toml
+
+# Main configuration
+root = "."
+tmp_dir = "tmp"
+
+# Watch files with these extensions
+[build]
+  cmd = "go build -o ./tmp/main ."     # build command
+  bin = "tmp/main"                     # binary path after build
+  full_bin = ""                        # leave empty unless you need custom full path
+  include_ext = ["go", "tpl", "tmpl", "html"]  # file types to watch
+  exclude_dir = ["vendor", "tmp", "node_modules"]
+
+# What to do when build fails
+[log]
+  time = true
+
+[color]
+  main = "yellow"
+  watcher = "cyan"
+  build = "green"
+  runner = "magenta"
+
+# Run this before reloading
+[pre]
+  cmd = ""
+  delay = 0
+
+# Run this after reloading
+[post]
+  cmd = ""
+  delay = 0
+
+# Command-line args passed to the app (optional)
+[app]
+  args_bin = []
+  args = []
+
+# Ignore file patterns (optional)
+[ignore]
+  # Regex patterns (optional)
+  regex = ["_test.go"]
+
+# Delays (in milliseconds)
+[delay]
+  restart = 500
+  build = 100
