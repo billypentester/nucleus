@@ -1,4 +1,4 @@
 .env
 go.sum
 
-*.tmp
+*tmp
